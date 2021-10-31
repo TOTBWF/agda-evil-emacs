@@ -23,10 +23,9 @@ Next, create a directory called `.emacs.d` in your home directory, and copy the
 
 ## Keybinding Cheat Sheet
 Most useful keybindings start with a `SPC` prefix.
-
-`SPC f f` can be used to open files.
-`SPC b b` can be used to select buffers.
-`SPC w` opens up the window management menu, which lets us split/switch windows.
+- `SPC f f` can be used to open files.
+- `SPC b b` can be used to select buffers.
+- `SPC w` opens up the window management menu, which lets us split/switch windows.
 
 If you type part of a key sequence and wait, Emacs will display a list of possible
 keybindings available.
