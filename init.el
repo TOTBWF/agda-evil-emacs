@@ -379,4 +379,28 @@ to start up a shell process, and is also more consistent."
     :keymaps 'agda2-mode-map
     "d" '(agda2-goto-definition-keyboard :wk "goto definition")))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Themes
+
+;; The default Emacs theme is pretty jarring, but luckily
+;; we can use some of the themes provided by Doom Emacs.
+;; You can check out a full list at the repository:
+;; * https://github.com/hlissner/emacs-doom-themes
+
+;; If you want to experiment with other themes,
+;; you can hit `SPC SPC' to execute a command, followed
+;; by `disable-theme'. Then, hit `SPC SPC', followed by
+;; `load-theme', and then select the theme you want to try out
+;; If you don't like gruvbox, I recommend `doom-one'!
+;;
+;; Once you have a theme you like, you can change
+;; the name of the theme in the `load-theme' call below
+;; to have it loaded on startup.
+
+(use-package doom-themes
+  :straight t
+  :config
+  ;; Let's load the Gruvbox theme for now.
+  (load-theme 'doom-gruvbox t))
+
 ;;; init.el ends here
