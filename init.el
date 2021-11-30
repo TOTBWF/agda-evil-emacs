@@ -119,12 +119,24 @@ to start up a shell process, and is also more consistent."
   ;; variable's documentation inside emacs!
   (setq evil-want-keybinding nil)
   (setq evil-want-C-u-scroll t)
+
+  ;; On older versions of emacs, we fall back to using
+  ;; `undo-tree' for our undo system.
+  (if (>= emacs-major-version 28)
+      (setq evil-undo-system 'undo-tree)
+    (setq evil-undo-system 'undo-redo))
+
   ;; Code in the `:config' section gets run /after/
   ;; the package loads.
   :config
   ;; Here, we just want to enable `evil-mode' once we've finished loading
   ;; it.
   (evil-mode 1))
+
+(use-package undo-tree
+  :straight t
+  ;; See the above note for setting the undo system.
+  :if (< emacs-major-version 28))
 
 ;; We install the `which-key' (https://github.com/justbur/emacs-which-key) so that we
 ;; can see what keybindings we have available. This is super useful for discovery!
