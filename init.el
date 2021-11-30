@@ -389,7 +389,9 @@ to start up a shell process, and is also more consistent."
     "." '(agda2-goal-and-context-and-inferred :wk "display type"))
   (global-motion-definer
     :keymaps 'agda2-mode-map
-    "d" '(agda2-goto-definition-keyboard :wk "goto definition")))
+    "d" '(agda2-goto-definition-keyboard :wk "goto definition")
+    "j" '(agda2-next-goal :wk "next goal")
+    "k" '(agda2-previous-goal :wk "previous goal")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Themes
