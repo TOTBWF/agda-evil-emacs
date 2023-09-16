@@ -123,8 +123,8 @@ to start up a shell process, and is also more consistent."
   ;; On older versions of emacs, we fall back to using
   ;; `undo-tree' for our undo system.
   (if (>= emacs-major-version 28)
-      (setq evil-undo-system 'undo-tree)
-    (setq evil-undo-system 'undo-redo))
+      (setq evil-undo-system 'undo-redo)
+    (setq evil-undo-system 'undo-tree))
 
   ;; Code in the `:config' section gets run /after/
   ;; the package loads.
